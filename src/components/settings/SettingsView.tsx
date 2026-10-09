@@ -529,31 +529,31 @@ export const SettingsView: React.FC<Props> = ({
           <button
             type="button"
             onClick={() => setDarkMode(false)}
-            className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col items-center gap-2 cursor-pointer ${
+            className={`p-3 rounded-2xl border text-center transition-all flex flex-col items-center gap-1.5 cursor-pointer ${
               !darkMode
-                ? "border-[#2E6B57] bg-[#E2EEE8]/60 text-[#2E6B57] font-bold shadow-2xs"
-                : "border-[#E4DFD3] dark:border-[#2E2F2A] bg-white dark:bg-[#1E1F1B] text-[#6A665E] dark:text-[#A29D92] hover:bg-[#F5F2EB] dark:hover:bg-[#252622]"
+                ? "border-[#2E6B57] bg-[#EAF3EF] text-[#2E6B57] font-semibold shadow-2xs"
+                : "border-[#E4E4E7] dark:border-[#27272A] bg-white dark:bg-[#18191B] text-[#71717A] dark:text-[#A1A1AA] hover:bg-[#FAF8F5] dark:hover:bg-[#27272A]"
             }`}
           >
-            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-xs border border-[#E4DFD3]">
+            <div className="w-7 h-7 rounded-full bg-white flex items-center justify-center shadow-xs border border-[#E4E4E7] text-sm">
               ☀️
             </div>
-            <span className="text-xs">Light Theme</span>
+            <span className="text-xs font-medium">Light Theme</span>
           </button>
 
           <button
             type="button"
             onClick={() => setDarkMode(true)}
-            className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col items-center gap-2 cursor-pointer ${
+            className={`p-3 rounded-2xl border text-center transition-all flex flex-col items-center gap-1.5 cursor-pointer ${
               darkMode
-                ? "border-[#7CC4A6] bg-[#233229]/60 text-[#7CC4A6] font-bold shadow-2xs"
-                : "border-[#E4DFD3] dark:border-[#2E2F2A] bg-white dark:bg-[#1E1F1B] text-[#6A665E] dark:text-[#A29D92] hover:bg-[#F5F2EB] dark:hover:bg-[#252622]"
+                ? "border-[#52B788] bg-[#1B2E24] text-[#52B788] font-semibold shadow-2xs"
+                : "border-[#E4E4E7] dark:border-[#27272A] bg-white dark:bg-[#18191B] text-[#71717A] dark:text-[#A1A1AA] hover:bg-[#FAF8F5] dark:hover:bg-[#27272A]"
             }`}
           >
-            <div className="w-8 h-8 rounded-full bg-[#151613] flex items-center justify-center shadow-xs border border-[#2E2F2A]">
+            <div className="w-7 h-7 rounded-full bg-[#0F1011] flex items-center justify-center shadow-xs border border-[#27272A] text-sm text-[#FBBF24]">
               🌙
             </div>
-            <span className="text-xs">Dark Theme</span>
+            <span className="text-xs font-medium">Dark Theme</span>
           </button>
         </div>
       </div>

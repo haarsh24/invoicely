@@ -2,53 +2,197 @@
 <html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invoicely – Fast GST Invoice Generator with UPI QR Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Instant Dark Mode Init Script to Prevent Theme Flicker (Defaults to Light) -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('invoicely_theme');
+          if (saved === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Primary Search Engine Optimization (SEO) -->
+    <title>GST Invoice Generator with UPI QR Code | Free Online Bill Maker India</title>
+    <meta
+      name="title"
+      content="GST Invoice Generator with UPI QR Code | Free Online Bill Maker India"
+    />
     <meta
       name="description"
-      content="Create 100% compliant Indian GST invoices and Bills of Supply in under 60 seconds with instant UPI QR payment codes. Zero login, 100% private offline storage."
+      content="Generate compliant Indian GST invoices and Bills of Supply with dynamic UPI QR codes in 60 seconds. Free for freelancers, consultants & MSMEs. 100% private offline storage, instant A4 PDF."
     />
-    <meta property="og:title" content="Invoicely – Fast GST Invoice Generator with UPI QR Code" />
+    <meta
+      name="keywords"
+      content="gst invoice generator, gst invoice generator with upi qr code, free gst bill maker india, online gst invoice generator, freelancer invoice india, bill of supply generator, gst tax invoice format pdf, upi qr code bill generator, scan to pay invoice, gst invoice without login, free invoicing software for indian freelancers, cgst sgst igst calculator, composition scheme invoice"
+    />
+    <meta name="author" content="Harsh (kumarharsh.tech)" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://invoicely.app/" />
+
+    <!-- Open Graph / Facebook / WhatsApp Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Invoicely - GST Invoice Generator" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="GST Invoice Generator with UPI QR Code | Free Online Bill Maker India" />
     <meta
       property="og:description"
-      content="Make compliant GST invoices with dynamic UPI QR codes in 60 seconds. Free for Indian freelancers, consultants, and small sellers. All data stays on your device."
+      content="Make compliant GST invoices with dynamic UPI QR codes in 60 seconds. Free for Indian freelancers, consultants, and small businesses. All data stays private on your device."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Invoicely" />
+    <meta property="og:image" content="/icon-512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Invoicely - GST Invoice Generator with UPI QR Code" />
+
+    <!-- Twitter / X Social Share Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Invoicely – GST Invoices with UPI QR Code" />
+    <meta name="twitter:title" content="GST Invoice Generator with UPI QR Code | Free Online Bill Maker India" />
     <meta
       name="twitter:description"
-      content="Create compliant GST invoices and Bills of Supply with instant UPI QR payment codes in 60 seconds. Works offline."
+      content="Create compliant GST invoices and Bills of Supply with instant UPI QR payment codes in 60 seconds. Free & works offline."
     />
-    <meta name="theme-color" content="#2E6B57" />
+    <meta name="twitter:image" content="/icon-512.png" />
+    <meta name="twitter:creator" content="@kumarharsh" />
+
+    <!-- Mobile, PWA & Theming -->
+    <meta name="theme-color" content="#2E6B57" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F1011" media="(prefers-color-scheme: dark)" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
+
+    <!-- Typography & Embedded Rupee Safe Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Sans:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Comprehensive Schema.org Rich Structured Data (JSON-LD) for Google Search -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Invoicely",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "All",
-      "description": "Fast GST invoice and bill of supply generator with instant UPI QR code for Indian freelancers and small sellers.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Invoicely - GST Invoice Generator",
+        "alternateName": ["GST Invoice Generator with UPI QR Code", "Free Indian GST Bill Maker"],
+        "url": "https://invoicely.app/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Fast GST invoice and Bill of Supply generator with dynamic UPI QR payment codes for Indian freelancers, consultants, and small businesses.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Harsh",
+          "url": "https://kumarharsh.tech",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ranchi",
+            "addressRegion": "Jharkhand",
+            "addressCountry": "India"
+          }
+        },
+        "featureList": [
+          "Dynamic UPI QR Code generation with exact balance payable",
+          "Intra-state (CGST+SGST/UTGST) and Inter-state (IGST) automatic detection",
+          "Compliant with latest 2025/2026 GST slabs (0%, 5%, 18%, 40%) and custom rates",
+          "Instant A4 PDF download and mobile WhatsApp share sheet",
+          "100% private offline storage with zero login required",
+          "Support for Composition Scheme Bill of Supply and Non-registered Invoices"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to create a GST invoice with UPI QR Code in 60 seconds",
+        "description": "Step-by-step guide to generating a professional GST compliant invoice with a scannable UPI QR code in India.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Enter Business & UPI Details",
+            "text": "Add your business name, GSTIN (optional if unregistered), and your UPI VPA (e.g., yourname@okaxis)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add Customer & Place of Supply",
+            "text": "Select or input your customer's state and GSTIN. Invoicely automatically determines Intra-state vs Inter-state tax rules."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add Line Items and GST Rates",
+            "text": "Enter service or product items, HSN/SAC codes, rates, and GST rate (0%, 5%, 18%, or 40%)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Download PDF or Share via WhatsApp",
+            "text": "Preview the clean A4 invoice containing the dynamic UPI QR code and download high-resolution PDF instantly."
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How to generate a GST invoice with a UPI QR code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open Invoicely, enter your business details, add your UPI ID (VPA), fill in customer details, and add your service or product line items. A dynamic NPCI-compliant UPI QR code is automatically generated on the invoice with the exact balance payable. Download the PDF or share it with your client."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I make an invoice if I am an unregistered freelancer without GSTIN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! If your annual revenue is below the GST registration threshold (₹20 Lakhs for services / ₹40 Lakhs for goods in most Indian states), choose 'Not Registered' mode. Invoicely will generate a professional 'INVOICE' without GST tax columns, complete with your payment UPI QR code and bank details."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Invoicely calculate CGST, SGST, UTGST, and IGST?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Invoicely compares your business state code with the customer's Place of Supply state code. For intra-state supplies, tax is split equally between CGST and SGST (or CGST and UTGST in Union Territories without legislature like Chandigarh, Ladakh, Daman & Diu). For inter-state supplies, IGST is applied."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my client and financial data uploaded to any server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Invoicely runs 100% locally in your browser using IndexedDB. No invoice data, client names, GSTINs, or payment details are sent to any cloud server or third-party service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the mandatory fields required on a GST tax invoice under Rule 46?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rule 46 of the CGST Rules 2017 requires 16 mandatory fields: Invoice number (consecutive, max 16 chars), Date of issue, Supplier Name, Address and GSTIN, Recipient Name and Address (and GSTIN if registered), Place of Supply with State code, HSN or SAC code, Description of goods or services, Quantity and unit, Total value, Taxable value, Tax rate and split amount (CGST/SGST/IGST), and Signature or Digital QR code."
+            }
+          }
+        ]
       }
-    }
+    ]
     </script>
   </head>
-  <body class="bg-[#F5F2EB] dark:bg-[#151613] text-[#1D1C1A] dark:text-[#EDEAE2] antialiased selection:bg-[#E2EEE8] selection:text-[#2E6B57] min-h-screen">
+  <body class="bg-[#FAF8F5] dark:bg-[#0F1011] text-[#18181B] dark:text-[#F4F4F5] antialiased selection:bg-[#EAF3EF] selection:text-[#2E6B57] min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

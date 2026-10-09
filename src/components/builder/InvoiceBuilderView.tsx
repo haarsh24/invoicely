@@ -467,20 +467,20 @@ export const InvoiceBuilderView: React.FC<Props> = ({
   return (
     <div className="max-w-7xl mx-auto py-4 sm:py-8 px-3 sm:px-6 pb-36">
       {/* Top Header & Breadcrumbs */}
-      <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E4DFD3] dark:border-[#2E2F2A]">
+      <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E4E4E7] dark:border-[#27272A]">
         <div className="flex items-center gap-2">
           <button
             onClick={onCancelDraft}
-            className="p-1.5 rounded-full hover:bg-[#EBE5D7] dark:hover:bg-[#2E2F2A] text-[#6A665E] dark:text-[#A29D92]"
+            className="p-1.5 rounded-full hover:bg-[#F4EFE6] dark:hover:bg-[#27272A] text-[#71717A] dark:text-[#A1A1AA] cursor-pointer"
             title="Back to Invoices"
           >
             <ArrowLeft className="w-4 h-4" />
           </button>
           <div>
-            <h1 className="font-serif text-xl sm:text-2xl font-bold text-[#1D1C1A] dark:text-[#EDEAE2]">
+            <h1 className="font-serif text-lg sm:text-xl font-medium tracking-tight text-[#18181B] dark:text-[#F4F4F5]">
               {initialInvoice?.number ? `Edit ${initialInvoice.number}` : "Create Invoice"}
             </h1>
-            <p className="text-[11px] text-[#6A665E] dark:text-[#A29D92]">
+            <p className="text-[11px] text-[#71717A] dark:text-[#A1A1AA]">
               Autosaves locally to your device
             </p>
           </div>
@@ -488,21 +488,21 @@ export const InvoiceBuilderView: React.FC<Props> = ({
 
         <button
           onClick={onCancelDraft}
-          className="text-xs font-semibold text-[#6A665E] dark:text-[#A29D92] hover:text-[#1D1C1A] dark:hover:text-[#EDEAE2] px-3 py-1.5 rounded-full border border-[#E4DFD3] dark:border-[#2E2F2A]"
+          className="text-xs font-medium text-[#71717A] dark:text-[#A1A1AA] hover:text-[#18181B] dark:hover:text-[#F4F4F5] px-3 py-1.5 rounded-full border border-[#E4E4E7] dark:border-[#27272A] cursor-pointer"
         >
           Close
         </button>
       </div>
 
       {/* Mobile-First Segmented Switcher (Visible on mobile/tablet) */}
-      <div className="lg:hidden flex items-center bg-[#EBE5D7]/80 dark:bg-[#252622] p-1 rounded-full border border-[#E4DFD3] dark:border-[#2E2F2A] mb-5 shadow-2xs">
+      <div className="lg:hidden flex items-center bg-[#F4EFE6]/70 dark:bg-[#18191B] p-1 rounded-full border border-[#E4E4E7] dark:border-[#27272A] mb-5 shadow-2xs">
         <button
           type="button"
           onClick={() => setMobileTab("form")}
-          className={`flex-1 py-2 rounded-full text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+          className={`flex-1 py-1.5 rounded-full text-xs font-medium transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
             mobileTab === "form"
-              ? "bg-white dark:bg-[#1E1F1B] text-[#2E6B57] dark:text-[#7CC4A6] shadow-2xs"
-              : "text-[#6A665E] dark:text-[#A29D92]"
+              ? "bg-white dark:bg-[#27272A] text-[#2E6B57] dark:text-[#52B788] shadow-2xs font-semibold"
+              : "text-[#71717A] dark:text-[#A1A1AA]"
           }`}
         >
           <Edit3 className="w-3.5 h-3.5" />
@@ -512,10 +512,10 @@ export const InvoiceBuilderView: React.FC<Props> = ({
         <button
           type="button"
           onClick={() => setMobileTab("preview")}
-          className={`flex-1 py-2 rounded-full text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+          className={`flex-1 py-1.5 rounded-full text-xs font-medium transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
             mobileTab === "preview"
-              ? "bg-white dark:bg-[#1E1F1B] text-[#2E6B57] dark:text-[#7CC4A6] shadow-2xs"
-              : "text-[#6A665E] dark:text-[#A29D92]"
+              ? "bg-white dark:bg-[#27272A] text-[#2E6B57] dark:text-[#52B788] shadow-2xs font-semibold"
+              : "text-[#71717A] dark:text-[#A1A1AA]"
           }`}
         >
           <Eye className="w-3.5 h-3.5" />
@@ -1250,17 +1250,17 @@ export const InvoiceBuilderView: React.FC<Props> = ({
       </div>
 
       {/* Sticky Bottom Actions Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-30 bg-white/95 dark:bg-[#1E1F1B]/95 backdrop-blur-md border-t border-[#E4DFD3] dark:border-[#2E2F2A] px-4 py-3 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 z-30 bg-white/95 dark:bg-[#18191B]/95 backdrop-blur-md border-t border-[#E4E4E7] dark:border-[#27272A] px-3 sm:px-6 py-2.5 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">
           <div>
-            <p className="text-[11px] text-[#6A665E] dark:text-[#A29D92]">
+            <p className="text-[11px] text-[#71717A] dark:text-[#A1A1AA]">
               Grand Total:{" "}
-              <span className="font-serif text-base sm:text-lg font-bold text-[#1D1C1A] dark:text-[#EDEAE2] ml-1">
+              <span className="font-serif text-sm sm:text-base font-semibold text-[#18181B] dark:text-[#F4F4F5] ml-1">
                 {formatPaise(computed.totals.grandTotalPaise, true)}
               </span>
             </p>
             {computed.totals.balanceDuePaise !== computed.totals.grandTotalPaise && (
-              <p className="text-[10px] text-[#9A6A12] dark:text-[#D9A441] font-mono">
+              <p className="text-[10px] text-[#D97706] dark:text-[#FBBF24] font-mono">
                 Due: {formatPaise(computed.totals.balanceDuePaise, true)}
               </p>
             )}
@@ -1270,7 +1270,7 @@ export const InvoiceBuilderView: React.FC<Props> = ({
             <button
               type="button"
               onClick={() => setMobileTab(mobileTab === "form" ? "preview" : "form")}
-              className="lg:hidden px-3.5 py-2 rounded-full border border-[#E4DFD3] dark:border-[#2E2F2A] text-xs font-bold text-[#1D1C1A] dark:text-[#EDEAE2] hover:bg-[#EBE5D7] dark:hover:bg-[#252622]"
+              className="lg:hidden px-3 py-1.5 rounded-full border border-[#E4E4E7] dark:border-[#27272A] text-xs font-medium text-[#18181B] dark:text-[#F4F4F5] hover:bg-[#F4EFE6] dark:hover:bg-[#27272A] cursor-pointer"
             >
               {mobileTab === "form" ? "Preview" : "Edit Form"}
             </button>
@@ -1278,9 +1278,9 @@ export const InvoiceBuilderView: React.FC<Props> = ({
             <button
               type="button"
               onClick={() => onFinalize(currentInvoiceDraft)}
-              className="px-5 sm:px-6 py-2.5 rounded-full bg-[#2E6B57] hover:bg-[#255746] dark:bg-[#7CC4A6] dark:hover:bg-[#68a88e] text-white dark:text-[#151613] font-bold text-xs shadow-sm flex items-center gap-1.5 cursor-pointer"
+              className="px-4 sm:px-5 py-2 rounded-full bg-[#2E6B57] hover:bg-[#245746] dark:bg-[#52B788] dark:hover:bg-[#409c73] text-white dark:text-[#0F1011] font-medium text-xs shadow-2xs hover:shadow-xs flex items-center gap-1.5 cursor-pointer"
             >
-              <span>Finalize & Download</span>
+              <span>Issue & Download</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>

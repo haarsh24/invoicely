@@ -63,60 +63,60 @@ export const InvoicesListView: React.FC<Props> = ({
   });
 
   return (
-    <div className="max-w-5xl mx-auto py-6 sm:py-8 px-4 sm:px-6 space-y-6">
+    <div className="max-w-5xl mx-auto py-4 sm:py-6 px-4 sm:px-6 space-y-4">
       {/* Backup banner reminder */}
-      <div className="p-4 rounded-2xl bg-[#EBE5D7]/70 dark:bg-[#252622] border border-[#E4DFD3] dark:border-[#2E2F2A] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-        <div className="flex items-center gap-2.5">
-          <div className="p-2 rounded-lg bg-white dark:bg-[#1E1F1B] text-[#2E6B57] dark:text-[#7CC4A6] shadow-2xs">
-            <HardDriveDownload className="w-4 h-4" />
+      <div className="p-3 sm:p-3.5 rounded-xl bg-[#EBE5D7]/50 dark:bg-[#252622] border border-[#E4DFD3] dark:border-[#2E2F2A] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 text-[11px]">
+        <div className="flex items-center gap-2">
+          <div className="p-1.5 rounded-lg bg-white dark:bg-[#1E1F1B] text-[#2E6B57] dark:text-[#7CC4A6] shadow-2xs">
+            <HardDriveDownload className="w-3.5 h-3.5" />
           </div>
           <div>
             <p className="font-semibold text-[#1D1C1A] dark:text-[#EDEAE2]">
-              Device-Only Storage
+              On-Device Storage
             </p>
             <p className="text-[#6A665E] dark:text-[#A29D92]">
-              Your invoices are saved in this browser. Back them up to prevent data loss if your cache is cleared.
+              Invoices are stored in your browser. Export backups regularly to prevent accidental cache clearing.
             </p>
           </div>
         </div>
         <button
           onClick={onExportBackup}
-          className="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-[#1D1C1A] dark:text-[#EDEAE2] font-semibold text-xs hover:bg-[#F5F2EB] dark:hover:bg-[#2E2F2A] transition-colors shrink-0"
+          className="px-3 py-1 rounded-full bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-[#1D1C1A] dark:text-[#EDEAE2] font-medium text-[11px] hover:bg-[#F5F2EB] dark:hover:bg-[#2E2F2A] transition-colors shrink-0 cursor-pointer"
         >
-          Back up my data
+          Back up data
         </button>
       </div>
 
       {/* Header & Search Bar */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
         <div>
-          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1D1C1A] dark:text-[#EDEAE2]">
+          <h1 className="font-serif text-lg sm:text-xl font-medium text-[#1D1C1A] dark:text-[#EDEAE2]">
             Invoices
           </h1>
-          <p className="text-xs text-[#6A665E] dark:text-[#A29D92]">
-            {invoices.length} total recorded {invoices.length === 1 ? "invoice" : "invoices"}
+          <p className="text-[11px] text-[#6A665E] dark:text-[#A29D92]">
+            {invoices.length} recorded {invoices.length === 1 ? "invoice" : "invoices"}
           </p>
         </div>
 
         <button
           onClick={onNewInvoice}
-          className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#2E6B57] hover:bg-[#255746] dark:bg-[#7CC4A6] text-white dark:text-[#151613] text-xs font-semibold shadow-2xs transition-all"
+          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#2E6B57] hover:bg-[#255746] dark:bg-[#7CC4A6] text-white dark:text-[#151613] text-xs font-semibold shadow-2xs transition-all cursor-pointer"
         >
-          <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
-          <span>Create an Invoice</span>
+          <Plus className="w-3 h-3 stroke-[2.5]" />
+          <span>New Invoice</span>
         </button>
       </div>
 
       {/* Search and Filter Chips */}
-      <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
-        <div className="relative flex-1 max-w-md">
-          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6A665E] dark:text-[#A29D92]" />
+      <div className="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center justify-between">
+        <div className="relative flex-1 max-w-sm">
+          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-[#6A665E] dark:text-[#A29D92]" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search by invoice number, customer, item..."
-            className="w-full pl-10 pr-4 py-2 rounded-xl bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-xs text-[#1D1C1A] dark:text-[#EDEAE2] placeholder-[#A29D92] focus:outline-none focus:ring-2 focus:ring-[#2E6B57]/30 transition-all"
+            placeholder="Search by invoice number, customer..."
+            className="w-full pl-8 pr-3 py-1.5 rounded-xl bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-xs text-[#1D1C1A] dark:text-[#EDEAE2] placeholder-[#A29D92] focus:outline-none"
           />
         </div>
 

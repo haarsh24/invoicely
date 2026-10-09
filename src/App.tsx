@@ -14,6 +14,7 @@ import { InvoiceDetailView } from "./components/invoices/InvoiceDetailView";
 import { LibraryView } from "./components/library/LibraryView";
 import { SettingsView } from "./components/settings/SettingsView";
 import { SeoArticleView } from "./components/seo/SeoArticleView";
+import { Footer } from "./components/common/Footer";
 
 import {
   db,
@@ -40,11 +41,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<string>("landing");
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     if (typeof window !== "undefined") {
-      return (
-        localStorage.getItem("invoicely_theme") === "dark" ||
-        (!("invoicely_theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      );
+      return localStorage.getItem("invoicely_theme") === "dark";
     }
     return false;
   });
@@ -256,14 +253,14 @@ export default function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#F5F2EB] dark:bg-[#151613] flex items-center justify-center text-xs text-[#6A665E] dark:text-[#A29D92]">
+      <div className="min-h-screen bg-[#FAF8F5] dark:bg-[#0F1011] flex items-center justify-center text-xs text-[#71717A] dark:text-[#A1A1AA]">
         Loading Invoicely...
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F5F2EB] dark:bg-[#151613] text-[#1D1C1A] dark:text-[#EDEAE2] transition-colors pb-20 md:pb-6">
+    <div className="min-h-screen flex flex-col bg-[#FAF8F5] dark:bg-[#0F1011] text-[#18181B] dark:text-[#F4F4F5] transition-colors pb-20 md:pb-6">
       {/* Top Header */}
       <Header
         activeTab={activeTab}
@@ -374,6 +371,11 @@ export default function App() {
           />
         )}
       </main>
+
+      {/* Global Footer (shown on all screens except builder and finalize) */}
+      {activeTab !== "builder" && activeTab !== "finalize" && activeTab !== "landing" && (
+        <Footer onOpenSeoTopic={handleOpenSeoTopic} />
+      )}
 
       {/* Mobile Navigation Tab Bar (hidden when inside builder or finalize to give full screen to invoice actions) */}
       {activeTab !== "builder" && activeTab !== "finalize" && (
