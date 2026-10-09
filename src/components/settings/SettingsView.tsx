@@ -95,7 +95,7 @@ export const SettingsView: React.FC<Props> = ({
         <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1D1C1A] dark:text-[#EDEAE2]">
           Settings
         </h1>
-        <p className="text-xs text-[#6A665E] dark:text-[#A29D92]">
+        <p className="text-xs sm:text-sm text-[#6A665E] dark:text-[#A29D92]">
           Configure your business profile, default GST rates, UPI payment details, and data backups
         </p>
       </div>

@@ -173,75 +173,75 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
 
   return (
     <div className="space-y-12 sm:space-y-16 py-4 sm:py-8">
-      {/* Hero Section - Wispr Flow Inspired Editorial Balance */}
-      <section className="text-center space-y-4 max-w-2xl mx-auto px-4 sm:px-6 pt-2">
-        {/* Subtle pill badge */}
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EAF3EF] dark:bg-[#1B2E24] text-[#2E6B57] dark:text-[#52B788] text-[11px] font-medium tracking-normal border border-[#2E6B57]/15 dark:border-[#52B788]/20 shadow-2xs">
-          <Sparkles className="w-3 h-3 text-[#2E6B57] dark:text-[#52B788]" />
+      {/* Hero Section */}
+      <section className="text-center space-y-5 max-w-3xl mx-auto px-4 sm:px-6 pt-3">
+        {/* Pill badge */}
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF3EF] dark:bg-[#1B2E24] text-[#2E6B57] dark:text-[#52B788] text-xs sm:text-sm font-medium tracking-normal border border-[#2E6B57]/15 dark:border-[#52B788]/20 shadow-2xs">
+          <Sparkles className="w-3.5 h-3.5 text-[#2E6B57] dark:text-[#52B788]" />
           <span>Compliant GST Invoicing & Scan-to-Pay for India</span>
         </div>
 
-        {/* Refined headline - Editorial size, quiet luxury, not oversized */}
-        <h1 className="font-serif text-2xl sm:text-3xl md:text-[34px] font-medium tracking-tight text-[#18181B] dark:text-[#F4F4F5] leading-[1.25]">
+        {/* Standard legible headline */}
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-[44px] font-medium tracking-tight text-[#18181B] dark:text-[#F4F4F5] leading-[1.2]">
           Make compliant GST invoices with instant UPI scan-to-pay.
         </h1>
 
-        {/* Muted restrained subtitle */}
-        <p className="text-xs sm:text-[13px] text-[#71717A] dark:text-[#A1A1AA] leading-relaxed max-w-lg mx-auto font-normal">
+        {/* Standard body text */}
+        <p className="text-sm sm:text-base text-[#71717A] dark:text-[#A1A1AA] leading-relaxed max-w-xl mx-auto font-normal">
           Built for Indian freelancers, consultants, and small agencies. Automatic CGST/SGST/IGST tax logic, dynamic UPI QR codes, and 100% on-device privacy with zero login.
         </p>
 
-        {/* Compact CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 pt-2">
+        {/* Standard CTA buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
           <button
             onClick={onStartInvoice}
-            className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#2E6B57] hover:bg-[#245746] dark:bg-[#52B788] dark:hover:bg-[#409c73] text-white dark:text-[#0F1011] font-medium text-xs shadow-2xs hover:shadow transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#2E6B57] hover:bg-[#245746] dark:bg-[#52B788] dark:hover:bg-[#409c73] text-white dark:text-[#0F1011] font-medium text-sm sm:text-base shadow-xs hover:shadow transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>Create an invoice</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-4 h-4" />
           </button>
           <a
             href="#live-preview-demo"
-            className="w-full sm:w-auto px-4 py-2.5 rounded-full bg-white dark:bg-[#18191B] hover:bg-[#FAF8F5] dark:hover:bg-[#27272A] border border-[#E4E4E7] dark:border-[#27272A] text-[#18181B] dark:text-[#F4F4F5] font-medium text-xs transition-all text-center"
+            className="w-full sm:w-auto px-5 py-3 rounded-full bg-white dark:bg-[#18191B] hover:bg-[#FAF8F5] dark:hover:bg-[#27272A] border border-[#E4E4E7] dark:border-[#27272A] text-[#18181B] dark:text-[#F4F4F5] font-medium text-sm sm:text-base transition-all text-center"
           >
             See live sample
           </a>
         </div>
 
-        {/* 3 Calm Value Cards - Refined sizing */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 text-left">
-          <div className="p-4 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-1.5 shadow-2xs">
-            <div className="w-6.5 h-6.5 rounded-lg bg-[#EAF3EF] dark:bg-[#1B2E24] flex items-center justify-center text-[#2E6B57] dark:text-[#52B788]">
-              <QrCode className="w-3.5 h-3.5" />
+        {/* 3 Calm Value Cards - Standard legible sizing */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 text-left">
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-2 shadow-2xs">
+            <div className="w-8 h-8 rounded-lg bg-[#EAF3EF] dark:bg-[#1B2E24] flex items-center justify-center text-[#2E6B57] dark:text-[#52B788]">
+              <QrCode className="w-4 h-4" />
             </div>
-            <h2 className="font-semibold text-xs text-[#18181B] dark:text-[#F4F4F5]">
+            <h2 className="font-semibold text-sm sm:text-base text-[#18181B] dark:text-[#F4F4F5]">
               Instant UPI QR Code
             </h2>
-            <p className="text-[11px] text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
               Clients scan and pay exact rupees via GPay, PhonePe, or Paytm with zero friction.
             </p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-1.5 shadow-2xs">
-            <div className="w-6.5 h-6.5 rounded-lg bg-[#EAF3EF] dark:bg-[#1B2E24] flex items-center justify-center text-[#2E6B57] dark:text-[#52B788]">
-              <ShieldCheck className="w-3.5 h-3.5" />
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-2 shadow-2xs">
+            <div className="w-8 h-8 rounded-lg bg-[#EAF3EF] dark:bg-[#1B2E24] flex items-center justify-center text-[#2E6B57] dark:text-[#52B788]">
+              <ShieldCheck className="w-4 h-4" />
             </div>
-            <h2 className="font-semibold text-xs text-[#18181B] dark:text-[#F4F4F5]">
+            <h2 className="font-semibold text-sm sm:text-base text-[#18181B] dark:text-[#F4F4F5]">
               100% Private & Offline
             </h2>
-            <p className="text-[11px] text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
               All records stay on this device in local storage. No tracking, cloud databases, or paywalls.
             </p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-1.5 shadow-2xs">
-            <div className="w-6.5 h-6.5 rounded-lg bg-[#EAF3EF] dark:bg-[#1B2E24] flex items-center justify-center text-[#2E6B57] dark:text-[#52B788]">
-              <FileCheck className="w-3.5 h-3.5" />
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-2 shadow-2xs">
+            <div className="w-8 h-8 rounded-lg bg-[#EAF3EF] dark:bg-[#1B2E24] flex items-center justify-center text-[#2E6B57] dark:text-[#52B788]">
+              <FileCheck className="w-4 h-4" />
             </div>
-            <h2 className="font-semibold text-xs text-[#18181B] dark:text-[#F4F4F5]">
+            <h2 className="font-semibold text-sm sm:text-base text-[#18181B] dark:text-[#F4F4F5]">
               Rule 46 Compliant
             </h2>
-            <p className="text-[11px] text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
               Auto-detects Intra (CGST+SGST/UTGST) vs Inter (IGST), discounts, and advances.
             </p>
           </div>
@@ -249,20 +249,20 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
       </section>
 
       {/* Live Sample Preview Section */}
-      <section id="live-preview-demo" className="space-y-3 max-w-4xl mx-auto px-3 sm:px-6">
-        <div className="text-center space-y-1">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[#2E6B57] dark:text-[#52B788]">
+      <section id="live-preview-demo" className="space-y-4 max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="text-center space-y-1.5">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#2E6B57] dark:text-[#52B788]">
             Interactive Output
           </p>
-          <h2 className="font-serif text-lg sm:text-xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
+          <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
             Clean, professional A4 PDF with dynamic QR code
           </h2>
-          <p className="text-xs text-[#71717A] dark:text-[#A1A1AA]">
+          <p className="text-sm text-[#71717A] dark:text-[#A1A1AA]">
             Real sample invoice generated directly in the browser by {APP_NAME}.
           </p>
         </div>
 
-        <div className="p-2 sm:p-5 bg-[#F4EFE6]/50 dark:bg-[#18191B]/50 border border-[#E4E4E7] dark:border-[#27272A] rounded-2xl overflow-hidden flex justify-center">
+        <div className="p-3 sm:p-6 bg-[#F4EFE6]/50 dark:bg-[#18191B]/50 border border-[#E4E4E7] dark:border-[#27272A] rounded-2xl overflow-hidden flex justify-center">
           <div className="w-full max-w-[720px] transform scale-[0.85] sm:scale-100 origin-top">
             <InvoiceA4Preview
               invoice={sampleInvoice}
@@ -272,62 +272,62 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
           </div>
         </div>
 
-        <div className="text-center pt-1">
+        <div className="text-center pt-2">
           <button
             onClick={onStartInvoice}
-            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#2E6B57] hover:bg-[#245746] dark:bg-[#52B788] text-white dark:text-[#0F1011] font-medium text-xs shadow-2xs cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2E6B57] hover:bg-[#245746] dark:bg-[#52B788] text-white dark:text-[#0F1011] font-medium text-sm sm:text-base shadow-2xs cursor-pointer"
           >
             <span>Create your invoice now</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </section>
 
-      {/* Comparison Section - Refined Editorial Table */}
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 space-y-3 pt-2">
-        <div className="text-center space-y-1">
-          <h2 className="font-serif text-lg sm:text-xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
+      {/* Comparison Section - Standard Table Typography */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4 pt-2">
+        <div className="text-center space-y-1.5">
+          <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
             Built differently than heavy accounting tools
           </h2>
-          <p className="text-xs text-[#71717A] dark:text-[#A1A1AA]">
+          <p className="text-sm text-[#71717A] dark:text-[#A1A1AA]">
             Everything Indian freelancers need to bill clients cleanly, with zero baggage.
           </p>
         </div>
 
         <div className="overflow-x-auto rounded-2xl border border-[#E4E4E7] dark:border-[#27272A] bg-white dark:bg-[#18191B] shadow-2xs">
-          <table className="w-full text-xs text-left border-collapse">
+          <table className="w-full text-sm text-left border-collapse">
             <thead>
               <tr className="bg-[#FAF8F5]/80 dark:bg-[#1F2023] border-b border-[#E4E4E7] dark:border-[#27272A] text-[#18181B] dark:text-[#F4F4F5]">
-                <th className="py-2.5 px-3.5 font-medium">Feature</th>
-                <th className="py-2.5 px-3.5 font-semibold text-[#2E6B57] dark:text-[#52B788]">Invoicely</th>
-                <th className="py-2.5 px-3.5 font-normal text-[#71717A] dark:text-[#A1A1AA]">Traditional apps</th>
+                <th className="py-3 px-4 font-medium">Feature</th>
+                <th className="py-3 px-4 font-semibold text-[#2E6B57] dark:text-[#52B788]">Invoicely</th>
+                <th className="py-3 px-4 font-normal text-[#71717A] dark:text-[#A1A1AA]">Traditional apps</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E4E4E7]/60 dark:divide-[#27272A]/60">
               <tr>
-                <td className="py-2.5 px-3.5 font-medium">Pricing</td>
-                <td className="py-2.5 px-3.5 font-semibold text-[#2E6B57] dark:text-[#52B788]">100% Free Forever</td>
-                <td className="py-2.5 px-3.5 text-[#71717A] dark:text-[#A1A1AA]">₹500 - ₹1,500/month</td>
+                <td className="py-3 px-4 font-medium">Pricing</td>
+                <td className="py-3 px-4 font-semibold text-[#2E6B57] dark:text-[#52B788]">100% Free Forever</td>
+                <td className="py-3 px-4 text-[#71717A] dark:text-[#A1A1AA]">₹500 - ₹1,500/month</td>
               </tr>
               <tr>
-                <td className="py-2.5 px-3.5 font-medium">Account / Login</td>
-                <td className="py-2.5 px-3.5 font-semibold text-[#2E6B57] dark:text-[#52B788]">None required</td>
-                <td className="py-2.5 px-3.5 text-[#71717A] dark:text-[#A1A1AA]">Mandatory signup & phone OTP</td>
+                <td className="py-3 px-4 font-medium">Account / Login</td>
+                <td className="py-3 px-4 font-semibold text-[#2E6B57] dark:text-[#52B788]">None required</td>
+                <td className="py-3 px-4 text-[#71717A] dark:text-[#A1A1AA]">Mandatory signup & phone OTP</td>
               </tr>
               <tr>
-                <td className="py-2.5 px-3.5 font-medium">UPI QR Code</td>
-                <td className="py-2.5 px-3.5 font-semibold text-[#2E6B57] dark:text-[#52B788]">Dynamic with exact amount</td>
-                <td className="py-2.5 px-3.5 text-[#71717A] dark:text-[#A1A1AA]">Paid add-on or static QR</td>
+                <td className="py-3 px-4 font-medium">UPI QR Code</td>
+                <td className="py-3 px-4 font-semibold text-[#2E6B57] dark:text-[#52B788]">Dynamic with exact amount</td>
+                <td className="py-3 px-4 text-[#71717A] dark:text-[#A1A1AA]">Paid add-on or static QR</td>
               </tr>
               <tr>
-                <td className="py-2.5 px-3.5 font-medium">Data Privacy</td>
-                <td className="py-2.5 px-3.5 font-semibold text-[#2E6B57] dark:text-[#52B788]">100% On-device IndexedDB</td>
-                <td className="py-2.5 px-3.5 text-[#71717A] dark:text-[#A1A1AA]">Stored on cloud servers</td>
+                <td className="py-3 px-4 font-medium">Data Privacy</td>
+                <td className="py-3 px-4 font-semibold text-[#2E6B57] dark:text-[#52B788]">100% On-device IndexedDB</td>
+                <td className="py-3 px-4 text-[#71717A] dark:text-[#A1A1AA]">Stored on cloud servers</td>
               </tr>
               <tr>
-                <td className="py-2.5 px-3.5 font-medium">Statutory Accuracy</td>
-                <td className="py-2.5 px-3.5 font-semibold text-[#2E6B57] dark:text-[#52B788]">Exact paisa arithmetic & UTGST</td>
-                <td className="py-2.5 px-3.5 text-[#71717A] dark:text-[#A1A1AA]">Frequent rounding errors</td>
+                <td className="py-3 px-4 font-medium">Statutory Accuracy</td>
+                <td className="py-3 px-4 font-semibold text-[#2E6B57] dark:text-[#52B788]">Exact paisa arithmetic & UTGST</td>
+                <td className="py-3 px-4 text-[#71717A] dark:text-[#A1A1AA]">Frequent rounding errors</td>
               </tr>
             </tbody>
           </table>
@@ -335,29 +335,29 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
       </section>
 
       {/* Deep SEO Guide & Knowledge Section for 'GST Invoice Generator' */}
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 space-y-4 pt-4">
-        <div className="text-center space-y-1">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[#2E6B57] dark:text-[#52B788]">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4 pt-4">
+        <div className="text-center space-y-1.5">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#2E6B57] dark:text-[#52B788]">
             Statutory Guide
           </p>
-          <h2 className="font-serif text-lg sm:text-xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
+          <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
             Everything you need to know about Indian GST invoices
           </h2>
-          <p className="text-xs text-[#71717A] dark:text-[#A1A1AA]">
+          <p className="text-sm text-[#71717A] dark:text-[#A1A1AA]">
             Essential statutory requirements under the Central Goods and Services Tax Act.
           </p>
         </div>
 
-        <div className="space-y-3 text-xs text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
-          <div className="p-4 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-2">
-            <h3 className="font-semibold text-xs text-[#18181B] dark:text-[#F4F4F5] flex items-center gap-1.5">
-              <Calculator className="w-3.5 h-3.5 text-[#2E6B57] dark:text-[#52B788]" />
+        <div className="space-y-3.5 text-sm text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-2.5">
+            <h3 className="font-semibold text-sm sm:text-base text-[#18181B] dark:text-[#F4F4F5] flex items-center gap-2">
+              <Calculator className="w-4 h-4 text-[#2E6B57] dark:text-[#52B788]" />
               How GST Tax Calculation Works: Intra-state vs Inter-state
             </h3>
             <p>
               In India, GST treatment depends on the location of the supplier and the Place of Supply (the customer's state):
             </p>
-            <ul className="list-disc list-inside space-y-1 pl-1">
+            <ul className="list-disc list-inside space-y-1.5 pl-1 text-sm">
               <li>
                 <strong className="text-[#18181B] dark:text-[#F4F4F5]">Intra-State Supply (Same State):</strong> Tax is split equally into <strong>CGST</strong> (Central GST) and <strong>SGST</strong> (State GST). In Union Territories without a legislature (e.g., Chandigarh, Ladakh, Daman & Diu), <strong>UTGST</strong> replaces SGST.
               </li>
@@ -367,9 +367,9 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
             </ul>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-2">
-            <h3 className="font-semibold text-xs text-[#18181B] dark:text-[#F4F4F5] flex items-center gap-1.5">
-              <Smartphone className="w-3.5 h-3.5 text-[#2E6B57] dark:text-[#52B788]" />
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] space-y-2.5">
+            <h3 className="font-semibold text-sm sm:text-base text-[#18181B] dark:text-[#F4F4F5] flex items-center gap-2">
+              <Smartphone className="w-4 h-4 text-[#2E6B57] dark:text-[#52B788]" />
               Why Add a Dynamic UPI QR Code to Your Invoices?
             </h3>
             <p>
@@ -380,20 +380,20 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
       </section>
 
       {/* Frequently Asked Questions (FAQ) Accordion */}
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 space-y-3 pt-2">
-        <div className="text-center space-y-1">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[#2E6B57] dark:text-[#52B788]">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 space-y-4 pt-2">
+        <div className="text-center space-y-1.5">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#2E6B57] dark:text-[#52B788]">
             Clear Answers
           </p>
-          <h2 className="font-serif text-lg sm:text-xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
+          <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
             Frequently Asked Questions
           </h2>
-          <p className="text-xs text-[#71717A] dark:text-[#A1A1AA]">
+          <p className="text-sm text-[#71717A] dark:text-[#A1A1AA]">
             Common queries about Indian GST invoicing, UPI QR codes, and privacy.
           </p>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {faqs.map((faq, idx) => {
             const isOpen = openFaq === idx;
             return (
@@ -404,17 +404,17 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
                 <button
                   type="button"
                   onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full px-4 py-3 text-left flex justify-between items-center gap-3 text-xs font-medium text-[#18181B] dark:text-[#F4F4F5] cursor-pointer"
+                  className="w-full px-5 py-3.5 text-left flex justify-between items-center gap-3 text-sm sm:text-base font-medium text-[#18181B] dark:text-[#F4F4F5] cursor-pointer"
                 >
                   <span>{faq.q}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-3.5 h-3.5 text-[#71717A] shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-[#71717A] shrink-0" />
                   ) : (
-                    <ChevronDown className="w-3.5 h-3.5 text-[#71717A] shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-[#71717A] shrink-0" />
                   )}
                 </button>
                 {isOpen && (
-                  <div className="px-4 pb-3.5 text-xs text-[#71717A] dark:text-[#A1A1AA] leading-relaxed border-t border-[#E4E4E7]/60 dark:border-[#27272A]/60 pt-2.5">
+                  <div className="px-5 pb-4 text-sm text-[#71717A] dark:text-[#A1A1AA] leading-relaxed border-t border-[#E4E4E7]/60 dark:border-[#27272A]/60 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -425,27 +425,27 @@ export const LandingView: React.FC<Props> = ({ onStartInvoice, onOpenSeoTopic })
       </section>
 
       {/* Guides & SEO Topics */}
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 pt-2 space-y-3">
-        <div className="text-center sm:text-left space-y-0.5">
-          <h3 className="font-serif text-base font-medium text-[#18181B] dark:text-[#F4F4F5]">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 pt-3 space-y-3">
+        <div className="text-center sm:text-left space-y-1">
+          <h3 className="font-serif text-lg sm:text-xl font-medium text-[#18181B] dark:text-[#F4F4F5]">
             GST & Invoicing Knowledge Base
           </h3>
-          <p className="text-xs text-[#71717A] dark:text-[#A1A1AA]">
+          <p className="text-sm text-[#71717A] dark:text-[#A1A1AA]">
             Statutory checklists and guides for Indian freelancers and businesses.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {seoTopics.map((topic) => (
             <button
               key={topic.slug}
               onClick={() => onOpenSeoTopic(topic.slug)}
-              className="p-3 rounded-xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] text-left hover:border-[#2E6B57]/50 dark:hover:border-[#52B788]/50 transition-colors group flex items-center justify-between cursor-pointer shadow-2xs"
+              className="p-3.5 rounded-xl bg-white dark:bg-[#18191B] border border-[#E4E4E7] dark:border-[#27272A] text-left hover:border-[#2E6B57]/50 dark:hover:border-[#52B788]/50 transition-colors group flex items-center justify-between cursor-pointer shadow-2xs"
             >
-              <span className="text-xs font-medium text-[#18181B] dark:text-[#F4F4F5] group-hover:text-[#2E6B57] dark:group-hover:text-[#52B788]">
+              <span className="text-sm font-medium text-[#18181B] dark:text-[#F4F4F5] group-hover:text-[#2E6B57] dark:group-hover:text-[#52B788]">
                 {topic.title}
               </span>
-              <ExternalLink className="w-3 h-3 text-[#71717A] dark:text-[#A1A1AA] group-hover:translate-x-0.5 transition-transform shrink-0" />
+              <ExternalLink className="w-3.5 h-3.5 text-[#71717A] dark:text-[#A1A1AA] group-hover:translate-x-0.5 transition-transform shrink-0" />
             </button>
           ))}
         </div>

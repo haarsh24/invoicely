@@ -65,10 +65,10 @@ export const InvoicesListView: React.FC<Props> = ({
   return (
     <div className="max-w-5xl mx-auto py-4 sm:py-6 px-4 sm:px-6 space-y-4">
       {/* Backup banner reminder */}
-      <div className="p-3 sm:p-3.5 rounded-xl bg-[#EBE5D7]/50 dark:bg-[#252622] border border-[#E4DFD3] dark:border-[#2E2F2A] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 text-[11px]">
-        <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-white dark:bg-[#1E1F1B] text-[#2E6B57] dark:text-[#7CC4A6] shadow-2xs">
-            <HardDriveDownload className="w-3.5 h-3.5" />
+      <div className="p-3.5 sm:p-4 rounded-xl bg-[#EBE5D7]/50 dark:bg-[#252622] border border-[#E4DFD3] dark:border-[#2E2F2A] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm">
+        <div className="flex items-center gap-2.5">
+          <div className="p-2 rounded-lg bg-white dark:bg-[#1E1F1B] text-[#2E6B57] dark:text-[#7CC4A6] shadow-2xs">
+            <HardDriveDownload className="w-4 h-4" />
           </div>
           <div>
             <p className="font-semibold text-[#1D1C1A] dark:text-[#EDEAE2]">
@@ -81,7 +81,7 @@ export const InvoicesListView: React.FC<Props> = ({
         </div>
         <button
           onClick={onExportBackup}
-          className="px-3 py-1 rounded-full bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-[#1D1C1A] dark:text-[#EDEAE2] font-medium text-[11px] hover:bg-[#F5F2EB] dark:hover:bg-[#2E2F2A] transition-colors shrink-0 cursor-pointer"
+          className="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-[#1D1C1A] dark:text-[#EDEAE2] font-medium text-xs sm:text-sm hover:bg-[#F5F2EB] dark:hover:bg-[#2E2F2A] transition-colors shrink-0 cursor-pointer"
         >
           Back up data
         </button>
@@ -90,43 +90,43 @@ export const InvoicesListView: React.FC<Props> = ({
       {/* Header & Search Bar */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
         <div>
-          <h1 className="font-serif text-lg sm:text-xl font-medium text-[#1D1C1A] dark:text-[#EDEAE2]">
+          <h1 className="font-serif text-xl sm:text-2xl font-medium text-[#1D1C1A] dark:text-[#EDEAE2]">
             Invoices
           </h1>
-          <p className="text-[11px] text-[#6A665E] dark:text-[#A29D92]">
+          <p className="text-xs sm:text-sm text-[#6A665E] dark:text-[#A29D92]">
             {invoices.length} recorded {invoices.length === 1 ? "invoice" : "invoices"}
           </p>
         </div>
 
         <button
           onClick={onNewInvoice}
-          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#2E6B57] hover:bg-[#255746] dark:bg-[#7CC4A6] text-white dark:text-[#151613] text-xs font-semibold shadow-2xs transition-all cursor-pointer"
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#2E6B57] hover:bg-[#255746] dark:bg-[#7CC4A6] text-white dark:text-[#151613] text-sm font-semibold shadow-2xs transition-all cursor-pointer"
         >
-          <Plus className="w-3 h-3 stroke-[2.5]" />
+          <Plus className="w-4 h-4 stroke-[2.5]" />
           <span>New Invoice</span>
         </button>
       </div>
 
       {/* Search and Filter Chips */}
-      <div className="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center justify-between">
+      <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
         <div className="relative flex-1 max-w-sm">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-[#6A665E] dark:text-[#A29D92]" />
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6A665E] dark:text-[#A29D92]" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by invoice number, customer..."
-            className="w-full pl-8 pr-3 py-1.5 rounded-xl bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-xs text-[#1D1C1A] dark:text-[#EDEAE2] placeholder-[#A29D92] focus:outline-none"
+            className="w-full pl-9 pr-3.5 py-2 rounded-xl bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-sm text-[#1D1C1A] dark:text-[#EDEAE2] placeholder-[#A29D92] focus:outline-none"
           />
         </div>
 
         {/* Filter chips */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
           {(["all", "draft", "issued", "paid", "cancelled"] as const).map((status) => (
             <button
               key={status}
               onClick={() => setStatusFilter(status)}
-              className={`px-3 py-1 rounded-full text-xs font-medium capitalize transition-all whitespace-nowrap ${
+              className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium capitalize transition-all whitespace-nowrap cursor-pointer ${
                 statusFilter === status
                   ? "bg-[#2E6B57] dark:bg-[#7CC4A6] text-white dark:text-[#151613] font-semibold"
                   : "bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-[#6A665E] dark:text-[#A29D92] hover:text-[#1D1C1A] dark:hover:text-[#EDEAE2]"

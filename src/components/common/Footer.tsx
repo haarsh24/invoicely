@@ -45,42 +45,42 @@ export const Footer: React.FC<Props> = ({ onOpenSeoTopic }) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 space-y-8">
         {/* Top Header Row */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <div className="space-y-1">
+          <div className="space-y-1.5">
             <div className="flex items-center gap-2">
-              <span className="font-serif font-medium text-base text-[#18181B] dark:text-[#F4F4F5] tracking-tight">
+              <span className="font-serif font-medium text-lg text-[#18181B] dark:text-[#F4F4F5] tracking-tight">
                 {APP_NAME}
               </span>
-              <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#EAF3EF] dark:bg-[#1B2E24] text-[#2E6B57] dark:text-[#52B788] border border-[#2E6B57]/15 dark:border-[#52B788]/20">
+              <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#EAF3EF] dark:bg-[#1B2E24] text-[#2E6B57] dark:text-[#52B788] border border-[#2E6B57]/15 dark:border-[#52B788]/20">
                 100% Free & Offline
               </span>
             </div>
-            <p className="text-xs text-[#71717A] dark:text-[#A1A1AA] max-w-md">
+            <p className="text-sm text-[#71717A] dark:text-[#A1A1AA] max-w-md leading-relaxed">
               Compliant GST invoices, Bills of Supply, and instant UPI QR codes for Indian freelancers, consultants, and independent agencies.
             </p>
           </div>
 
           {/* Privacy badge */}
-          <div className="flex items-center gap-2 text-xs text-[#2E6B57] dark:text-[#52B788] bg-[#EAF3EF]/80 dark:bg-[#1B2E24]/80 px-3 py-1.5 rounded-full border border-[#2E6B57]/15 dark:border-[#52B788]/20 shadow-2xs">
-            <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
-            <span className="text-[11px] font-medium">Zero Server Storage • Data Stays in Your Browser</span>
+          <div className="flex items-center gap-2 text-sm text-[#2E6B57] dark:text-[#52B788] bg-[#EAF3EF]/80 dark:bg-[#1B2E24]/80 px-3.5 py-1.5 rounded-full border border-[#2E6B57]/15 dark:border-[#52B788]/20 shadow-2xs">
+            <ShieldCheck className="w-4 h-4 shrink-0" />
+            <span className="text-xs sm:text-sm font-medium">Zero Server Storage • Stays in Browser</span>
           </div>
         </div>
 
         {/* SEO Knowledge Clusters Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2 border-t border-[#E4E4E7]/80 dark:border-[#27272A]/80 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-[#E4E4E7]/80 dark:border-[#27272A]/80">
           {seoClusters.map((cluster) => (
-            <div key={cluster.title} className="space-y-2.5">
-              <h4 className="text-[11px] font-semibold uppercase tracking-wider text-[#71717A] dark:text-[#A1A1AA]">
+            <div key={cluster.title} className="space-y-3">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#71717A] dark:text-[#A1A1AA]">
                 {cluster.title}
               </h4>
-              <ul className="space-y-1.5">
+              <ul className="space-y-2">
                 {cluster.items.map((item) => (
                   <li key={item.slug}>
                     <button
                       onClick={() => onOpenSeoTopic?.(item.slug)}
-                      className="text-[#52525B] dark:text-[#D4D4D8] hover:text-[#2E6B57] dark:hover:text-[#52B788] text-xs transition-colors flex items-center gap-1 cursor-pointer group text-left"
+                      className="text-[#52525B] dark:text-[#D4D4D8] hover:text-[#2E6B57] dark:hover:text-[#52B788] text-sm transition-colors flex items-center gap-1.5 cursor-pointer group text-left"
                     >
-                      <ChevronRight className="w-3 h-3 text-[#A1A1AA] group-hover:text-[#2E6B57] dark:group-hover:text-[#52B788] transition-transform group-hover:translate-x-0.5 shrink-0" />
+                      <ChevronRight className="w-3.5 h-3.5 text-[#A1A1AA] group-hover:text-[#2E6B57] dark:group-hover:text-[#52B788] transition-transform group-hover:translate-x-0.5 shrink-0" />
                       <span>{item.label}</span>
                     </button>
                   </li>
@@ -91,33 +91,33 @@ export const Footer: React.FC<Props> = ({ onOpenSeoTopic }) => {
         </div>
 
         {/* Quick Tools & Statutory Lookup */}
-        <div className="pt-2 border-t border-[#E4E4E7]/60 dark:border-[#27272A]/60 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="pt-3 border-t border-[#E4E4E7]/60 dark:border-[#27272A]/60 flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-[11px] text-[#71717A] dark:text-[#A1A1AA]">Quick References:</span>
+            <span className="text-xs sm:text-sm text-[#71717A] dark:text-[#A1A1AA]">Quick References:</span>
             <button
               onClick={() => setShowStateCodesModal(true)}
-              className="px-2.5 py-1 rounded-lg border border-[#E4E4E7] dark:border-[#27272A] bg-white dark:bg-[#18191B] hover:border-[#2E6B57] dark:hover:border-[#52B788] text-[11px] font-medium text-[#18181B] dark:text-[#F4F4F5] transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-lg border border-[#E4E4E7] dark:border-[#27272A] bg-white dark:bg-[#18191B] hover:border-[#2E6B57] dark:hover:border-[#52B788] text-xs sm:text-sm font-medium text-[#18181B] dark:text-[#F4F4F5] transition-colors cursor-pointer"
             >
               🇮🇳 All 37 GST State Codes
             </button>
             <button
               onClick={() => onOpenSeoTopic?.("gst-rates-slabs")}
-              className="px-2.5 py-1 rounded-lg border border-[#E4E4E7] dark:border-[#27272A] bg-white dark:bg-[#18191B] hover:border-[#2E6B57] dark:hover:border-[#52B788] text-[11px] font-medium text-[#18181B] dark:text-[#F4F4F5] transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-lg border border-[#E4E4E7] dark:border-[#27272A] bg-white dark:bg-[#18191B] hover:border-[#2E6B57] dark:hover:border-[#52B788] text-xs sm:text-sm font-medium text-[#18181B] dark:text-[#F4F4F5] transition-colors cursor-pointer"
             >
               Tax Slabs: 0% / 5% / 18% / 40%
             </button>
           </div>
 
-          <p className="text-[11px] text-[#A1A1AA] dark:text-[#71717A]">
+          <p className="text-xs text-[#A1A1AA] dark:text-[#71717A]">
             Statutory standard: Rule 46 CGST Act & NPCI UPI 2.0
           </p>
         </div>
 
         {/* Creator & Origin Tag - Explicitly requested by user */}
-        <div className="pt-4 border-t border-[#E4E4E7]/80 dark:border-[#27272A]/80 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-[#71717A] dark:text-[#A1A1AA]">
+        <div className="pt-4 border-t border-[#E4E4E7]/80 dark:border-[#27272A]/80 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-[#71717A] dark:text-[#A1A1AA]">
           <div className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-start">
             <span>Made with</span>
-            <span className="text-[#DC2626] inline-block animate-pulse text-sm" role="img" aria-label="love">
+            <span className="text-[#DC2626] inline-block animate-pulse text-base" role="img" aria-label="love">
               ❤️
             </span>
             <span>in Ranchi by</span>
@@ -128,11 +128,11 @@ export const Footer: React.FC<Props> = ({ onOpenSeoTopic }) => {
               className="font-semibold text-[#2E6B57] dark:text-[#52B788] hover:underline inline-flex items-center gap-1 ml-0.5 group"
             >
               <span>Harsh</span>
-              <ExternalLink className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+              <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 transition-opacity" />
             </a>
           </div>
 
-          <p className="text-[11px] text-[#A1A1AA] dark:text-[#71717A] text-center sm:text-right">
+          <p className="text-xs text-[#A1A1AA] dark:text-[#71717A] text-center sm:text-right">
             Not tax advice. Please verify specific tax treatment with a certified CA.
           </p>
         </div>

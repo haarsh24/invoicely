@@ -100,43 +100,43 @@ export const LibraryView: React.FC<Props> = ({
           <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1D1C1A] dark:text-[#EDEAE2]">
             Library
           </h1>
-          <p className="text-xs text-[#6A665E] dark:text-[#A29D92]">
+          <p className="text-xs sm:text-sm text-[#6A665E] dark:text-[#A29D92]">
             Quickly reuse saved clients and catalog items across invoices
           </p>
         </div>
 
         <button
           onClick={activeTab === "customers" ? openNewCustomer : openNewItem}
-          className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#2E6B57] hover:bg-[#255746] dark:bg-[#7CC4A6] text-white dark:text-[#151613] text-xs font-semibold shadow-2xs transition-all"
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#2E6B57] hover:bg-[#255746] dark:bg-[#7CC4A6] text-white dark:text-[#151613] text-sm font-semibold shadow-2xs transition-all cursor-pointer"
         >
-          <Plus className="w-3.5 h-3.5" />
+          <Plus className="w-4 h-4" />
           <span>{activeTab === "customers" ? "Add Customer" : "Add Item"}</span>
         </button>
       </div>
 
       {/* Tabs & Search */}
       <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
-        <div className="flex items-center gap-1 bg-[#EBE5D7]/50 dark:bg-[#252622] p-1 rounded-full border border-[#E4DFD3] dark:border-[#2E2F2A] w-fit">
+        <div className="flex items-center gap-1.5 bg-[#EBE5D7]/50 dark:bg-[#252622] p-1 rounded-full border border-[#E4DFD3] dark:border-[#2E2F2A] w-fit">
           <button
             onClick={() => setActiveTab("customers")}
-            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === "customers"
                 ? "bg-white dark:bg-[#1E1F1B] text-[#1D1C1A] dark:text-[#EDEAE2] shadow-2xs"
                 : "text-[#6A665E] dark:text-[#A29D92]"
             }`}
           >
-            <Users className="w-3.5 h-3.5" />
+            <Users className="w-4 h-4" />
             <span>Customers ({customers.length})</span>
           </button>
           <button
             onClick={() => setActiveTab("items")}
-            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === "items"
                 ? "bg-white dark:bg-[#1E1F1B] text-[#1D1C1A] dark:text-[#EDEAE2] shadow-2xs"
                 : "text-[#6A665E] dark:text-[#A29D92]"
             }`}
           >
-            <Package className="w-3.5 h-3.5" />
+            <Package className="w-4 h-4" />
             <span>Items & Services ({items.length})</span>
           </button>
         </div>
@@ -148,7 +148,7 @@ export const LibraryView: React.FC<Props> = ({
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder={`Search ${activeTab}...`}
-            className="w-full pl-10 pr-4 py-1.5 rounded-xl bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-xs text-[#1D1C1A] dark:text-[#EDEAE2] focus:outline-none focus:ring-2 focus:ring-[#2E6B57]/30"
+            className="w-full pl-10 pr-4 py-2 rounded-xl bg-white dark:bg-[#1E1F1B] border border-[#E4DFD3] dark:border-[#2E2F2A] text-sm text-[#1D1C1A] dark:text-[#EDEAE2] focus:outline-none focus:ring-2 focus:ring-[#2E6B57]/30"
           />
         </div>
       </div>
