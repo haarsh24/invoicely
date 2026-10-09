@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --paper: #F5F2EB;
+    --surface: #FFFFFF;
+    --ink: #1D1C1A;
+    --muted: #6A665E;
+    --line: #E4DFD3;
+    --accent: #2E6B57;
+    --accent-soft: #E2EEE8;
+    --sand: #EBE5D7;
+    --danger: #B4432F;
+    --warning: #9A6A12;
+    --success: #2E7D5B;
+    color-scheme: light;
+  }
+
+  html.dark, html[data-theme="dark"], body.dark, body[data-theme="dark"], .dark, [data-theme="dark"] {
+    --paper: #151613;
+    --surface: #1E1F1B;
+    --ink: #EDEAE2;
+    --muted: #A29D92;
+    --line: #2E2F2A;
+    --accent: #7CC4A6;
+    --accent-soft: #233229;
+    --sand: #252622;
+    --danger: #E27D68;
+    --warning: #D9A441;
+    --success: #6FC49B;
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: var(--paper);
+    color: var(--ink);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  body {
+    font-family: 'Figtree', system-ui, -apple-system, sans-serif;
+    background-color: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .font-serif {
+    font-family: 'Newsreader', Georgia, serif;
+  }
+
+  .font-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

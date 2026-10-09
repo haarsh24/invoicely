@@ -1,0 +1,6 @@
+{
+  "name": "Invoicely - GST Invoice Generator & UPI QR",
+  "description": "Fast, privacy-first GST invoice and bill generator with dynamic UPI QR code, multi-rate tax calculations, and instant PDF download for Indian freelancers and small businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
